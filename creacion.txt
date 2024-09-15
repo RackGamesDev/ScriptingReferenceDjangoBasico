@@ -1,0 +1,11 @@
+despues de instalar pip, python3 y django:
+django-admin startproject nombre
+python manage.py migrate
+
+abrir con: python manage.py runserver
+
+
+manage.py abre y gestiona el proyecto
+db.sqlite3 es la base de datos (puede ser intercambiable por otro motor)
+settings.py = ajustes y extensiones
+urls.py = diccionario con cada plantilla/vista a las urls
