@@ -1,0 +1,15 @@
+{% load static %}<!--cargar la carpeta static para poder usar los archivos estaticos (imagenes, css, js) una vez aclarado en settnings.py-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}"><!--usando los archivos estaticos-->
+    <title>Document</title>
+</head>
+<body>
+    <h2>asdf</h2>
+    <script src="{% static 'script.js' %}"></script>
+    <img src="{% static 'image.png' %}" alt="imagen">
+</body>
+</html>

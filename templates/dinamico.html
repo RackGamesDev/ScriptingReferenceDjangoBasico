@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hola: {{texto}}</h2><!--para representar variables pasadas en views.py se pone con corchetes, estas variables tambien pueden ser funciones que devuelvan algo-->
+    <ul>
+        <!--tambien se pueden hacer condicionales y bucles de esta manera (se esta usando un array desde el view)-->
+        {% for cosa in cosas %}
+            <li>{{cosa}}</li>
+        {% endfor %}
+        {% if texto == 'asdf' %}
+            <li>hola</li>
+        {% else %}
+            <li>adios</li>
+        {% endif %}
+        <p>{{cosas|length}}</p><!--asi se pueden acceder a sus propiedades y funciones-->
+        <p>{{texto|upper}}</p>
+
+        {# comentario que no se manda al cliente #}
+        {% comment %}
+            comentario multilinea que no se manda al cliente
+        {% endcomment %}
+    </ul>
+</body>
+</html>
