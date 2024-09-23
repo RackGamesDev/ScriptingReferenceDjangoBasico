@@ -28,7 +28,5 @@ urlpatterns = [
     path('dinamico/<str:texto>', views.dinamico, name='dinamico'),#esta representa la variable en el html con parametros
     path('estaticos/', views.estaticos, name='estaticos'),#esta pagina tiene archivos estaticos
     path('herencia/', views.herencia, name='herencia'),
-    path('herenciados/', views.herenciados, name='herenciados'),
-    path('herenciatres/', views.herenciatres, name='herenciatres'),
     
 ]
