@@ -10,8 +10,10 @@
 </head>
 <body>
     <div><h1>titulo</h1></div>
+    <a href="{% url 'herencia' %}">ir al una pagina</a><!--para hacer enlaces, indicar el nombre que tiene en urls.py-->
     <main> <!--esta es la parte que cambiara en cada pagina que herede de esta plantilla (cada parte tiene un nombre)-->
         {% block content %}{% endblock %}
     </main>
+    {% include 'layouts/partials/menu.html' %}<!--incluyendo contenido de otro archivo (ruta relativa desde templates)-->
 </body>
 </html>

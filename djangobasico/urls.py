@@ -27,6 +27,7 @@ urlpatterns = [
     path('pagina/', views.pagina, name='pagina'),#esta devuelve un html (template)
     path('dinamico/<str:texto>', views.dinamico, name='dinamico'),#esta representa la variable en el html con parametros
     path('estaticos/', views.estaticos, name='estaticos'),#esta pagina tiene archivos estaticos
-    path('herencia/', views.herencia, name='herencia'),
+    path('herencia/', views.herencia, name='herencia'),#este html es una extension de otro que es una plantilla
+    path('', views.index, name='index'),#esta es la pagina principal
     
 ]

@@ -19,3 +19,6 @@ def estaticos(request):
 
 def herencia(request):
     return render(request, 'herencia.html', {})
+
+def index(request):
+    return render(request, 'index.html', {})
