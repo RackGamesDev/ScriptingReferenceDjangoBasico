@@ -26,6 +26,9 @@ urlpatterns = [
     path('suma/<int:a>/<int:b>/<str:c>/', views.suma, name='suma'),#cuando la url tenga variables (suma/3/5/hola)
     path('pagina/', views.pagina, name='pagina'),#esta devuelve un html (template)
     path('dinamico/<str:texto>', views.dinamico, name='dinamico'),#esta representa la variable en el html con parametros
-    path('estaticos', views.estaticos, name='estaticos'),
+    path('estaticos/', views.estaticos, name='estaticos'),#esta pagina tiene archivos estaticos
+    path('herencia/', views.herencia, name='herencia'),
+    path('herenciados/', views.herenciados, name='herenciados'),
+    path('herenciatres/', views.herenciatres, name='herenciatres'),
     
 ]

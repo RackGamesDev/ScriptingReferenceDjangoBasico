@@ -16,3 +16,12 @@ def dinamico(request, texto):
 
 def estaticos(request):
     return render(request, 'estaticos.html', {})
+
+def herencia(request):
+    return render(request, 'herencia.html', {})
+
+def herenciados(request):
+    return render(request, 'herenciados.html', {})
+
+def herenciatres(request):
+    return render(request, 'herenciatres.html', {})
