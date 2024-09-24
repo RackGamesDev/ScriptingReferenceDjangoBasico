@@ -16,3 +16,7 @@ manage.py abre y gestiona el proyecto
 db.sqlite3 es la base de datos (puede ser intercambiable por otro motor)
 settings.py = ajustes y extensiones
 urls.py = diccionario con cada plantilla/vista a las urls
+
+para crear nuevo modulo: python manage.py startapp nombre
+para checkear si esta bien instalado: python manage.py check nombre
+en este caso la conexion a la base de datos esta en el modulo datos (datos/models.py)
