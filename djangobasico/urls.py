@@ -17,7 +17,7 @@ Including another URLconf
 
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views #IMPORTANTE IMPORTAR ESTO
 
 urlpatterns = [
@@ -29,5 +29,6 @@ urlpatterns = [
     path('estaticos/', views.estaticos, name='estaticos'),#esta pagina tiene archivos estaticos
     path('herencia/', views.herencia, name='herencia'),#este html es una extension de otro que es una plantilla
     path('', views.index, name='index'),#esta es la pagina principal
+    path('datos/', include('datos.urls')),#esta conecta con una view de otro modulo (hace falta importar include) (dominio.x/datos/test)
     
 ]

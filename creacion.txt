@@ -21,3 +21,4 @@ para crear nuevo modulo: python manage.py startapp nombre
 para checkear si esta bien instalado: python manage.py check nombre
 en este caso la conexion a la base de datos esta en el modulo datos (datos/models.py)
 cada vez que se actualice cualquier models.py: python manage.py makemigrations ; python manage.py migrate
+para conectar los otros modulos al principal, crear en el modulo urls.py y hacer alli las urls como si nada, y luego vincularlo al urls.py principal
