@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 # Create your models here.
 
@@ -9,7 +10,14 @@ class Usuario(models.Model):#creando un modelo para un objeto de la base de dato
     dinero = models.IntegerField(default=0)
     activo = models.BooleanField(default=False)
     descripcion = models.TextField(default="", null=True)
-    fecha = models.DateField(null=True)
+    fecha = models.DateField(null=True, default=date.today)
 
+    def __str__(self):
+        return
+
+class Publicacion(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)#clave foranea para relacionar entidades (la publicacion pertenece a un usuario)
+    nombre = models.CharField(max_length=10, null=False, default="a")
+    puntuacion = models.FloatField(null=False, default=0.4)
     def __str__(self):
         return
