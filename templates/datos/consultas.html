@@ -11,6 +11,7 @@
         {% for usuario in usuarios %}
         <li>{{usuario.nombre}} tiene {{usuario.dinero}}</li>
         {% endfor %}
+        {{ usuarios|length }}
     </ul>
 </body>
 </html>
