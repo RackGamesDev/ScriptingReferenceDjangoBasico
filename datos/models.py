@@ -16,7 +16,7 @@ class Usuario(models.Model):#creando un modelo para un objeto de la base de dato
         return
 
 class Publicacion(models.Model):
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)#clave foranea para relacionar entidades (la publicacion pertenece a un usuario)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)#clave foranea para relacionar entidades (la publicacion pertenece a un usuario) (se podrian hacer relaciones 1:1, 1:n y n:m segun como se hagan las claves)
     nombre = models.CharField(max_length=10, null=False, default="a")
     puntuacion = models.FloatField(null=False, default=0.4)
     def __str__(self):
