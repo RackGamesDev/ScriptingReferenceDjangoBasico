@@ -32,3 +32,7 @@ def actualizacion(request):
     objeto.nombre = "otro"
     objeto.save()
     return HttpResponse("OK")
+
+def relaciones(request):
+    
+    return HttpResponse("OK")

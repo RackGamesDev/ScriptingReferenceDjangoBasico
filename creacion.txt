@@ -3,7 +3,7 @@ es un framework backend para python que usa el mvc(modelo vista controlador) sol
 
 despues de instalar pip, python3 y django:
 django-admin startproject nombre
-python manage.py migrate
+python manage.py migrate (cada vez que cambie la base de datos)
 (crear en la carpeta views.py)
 (crear carpeta de templates donde estaran los htmls y declararlo en settings.py)
 (crear carpeta de statics donde estaran los archivos estaticos (recursos))
