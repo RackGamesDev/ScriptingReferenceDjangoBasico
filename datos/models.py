@@ -21,3 +21,9 @@ class Publicacion(models.Model):
     puntuacion = models.FloatField(null=False, default=0.4)
     def __str__(self):
         return self.usuario.nombre #accediendo a las propiedades de un objeto conectado
+
+class Grupo(models.Model):
+    nombre = models.CharField(max_length=10, null=False, default="a")
+    usuarios = models.ManyToManyField(Usuario) #para relaciones muchos-muchos, esto crearia una tabla extra en sql (se puede hacer manualmente con otro modelo)
+    def __str__(self):
+        return self.nombre
