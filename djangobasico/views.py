@@ -27,4 +27,6 @@ def formulario(request):
     return render(request, 'formulario.html', {})
 
 def destinoformulario(request):
-    return render(request, 'destinoformulario.html', {})
+    if request.method == 'GET': #el metodo de la peticion http (GET, POST, DELETE, PUT...)
+        nombre = request.GET['mensaje'] #en caso de que sea ese tipo de peticion, recoger cada dato enviado por fomulario
+    return render(request, 'destinoformulario.html', {'nombre': nombre})
