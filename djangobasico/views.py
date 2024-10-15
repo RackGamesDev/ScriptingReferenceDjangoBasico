@@ -22,3 +22,9 @@ def herencia(request):
 
 def index(request):
     return render(request, 'index.html', {})
+
+def formulario(request):
+    return render(request, 'formulario.html', {})
+
+def destinoformulario(request):
+    return render(request, 'destinoformulario.html', {})

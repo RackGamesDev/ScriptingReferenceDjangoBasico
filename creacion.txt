@@ -7,6 +7,9 @@ python manage.py migrate (cada vez que cambie la base de datos)
 (crear en la carpeta views.py)
 (crear carpeta de templates donde estaran los htmls y declararlo en settings.py)
 (crear carpeta de statics donde estaran los archivos estaticos (recursos))
+(crear carpeta de layouts donde estaran los pedazos montables de html)
+(crear una carpeta para los htmls de cada modulo (ej: datos))
+(crear una carpeta forms para los formularios?)
 (configurar settings.py)
 
 abrir con: python manage.py runserver

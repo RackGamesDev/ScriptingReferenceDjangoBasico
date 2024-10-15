@@ -30,5 +30,7 @@ urlpatterns = [
     path('herencia/', views.herencia, name='herencia'),#este html es una extension de otro que es una plantilla
     path('', views.index, name='index'),#esta es la pagina principal
     path('datos/', include('datos.urls')),#esta conecta con una view de otro modulo (hace falta importar include) (dominio.x/datos/test)
+    path('formulario/', views.formulario, name="formulario"),
+    path('destinoformulario/', views.destinoformulario, name="destinoformulario")
     
 ]
