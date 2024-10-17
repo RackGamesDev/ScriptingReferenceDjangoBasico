@@ -23,10 +23,17 @@ def herencia(request):
 def index(request):
     return render(request, 'index.html', {})
 
-def formulario(request):
-    return render(request, 'formulario.html', {})
+def formularios(request):
+    return render(request, 'formularios.html', {})
 
-def destinoformulario(request):
+def destinoformularioget(request):
     if request.method == 'GET': #el metodo de la peticion http (GET, POST, DELETE, PUT...)
         nombre = request.GET['mensaje'] #en caso de que sea ese tipo de peticion, recoger cada dato enviado por fomulario
-    return render(request, 'destinoformulario.html', {'nombre': nombre})
+        #al ser get, los datos vienen en la url asi que se recogen de aqui
+    return render(request, 'destinoformularioget.html', {'nombre': nombre})
+
+def destinoformulariopost(request):
+    if request.method == 'POST':
+        nombre = request.POST['nombre'] #recibiendo los datos de la peticion post
+        numero = request.POST['numero']
+    return render(request, 'destinoformulariopost.html', {'nombre': nombre, 'numero': numero})

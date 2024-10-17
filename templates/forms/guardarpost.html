@@ -1,0 +1,9 @@
+<form action="{% url 'destinoformulariopost' %}" method="POST"><!--enviando la peticion como post, por lo que los datos iran en la peticion y no en la url-->
+    <h4>formulario contacto</h4>
+    {% csrf_token %}<!--necesario para que no de error al envair post con formularios-->
+    <input type="text" name="nombre">
+    <br>
+    <input type="number" name="numero">
+    <br>
+    <input type="submit" value="enviar">
+</form>
