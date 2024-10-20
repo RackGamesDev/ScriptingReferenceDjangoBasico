@@ -10,6 +10,7 @@ python manage.py migrate (cada vez que cambie la base de datos)
 (crear carpeta de layouts donde estaran los pedazos montables de html)
 (crear una carpeta para los htmls de cada modulo (ej: datos))
 (crear una carpeta forms para los formularios?)
+(crear forms.py en caso de querer usar los formularios que vienen con django)
 (configurar settings.py)
 
 abrir con: python manage.py runserver

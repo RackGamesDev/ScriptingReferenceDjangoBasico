@@ -30,8 +30,10 @@ urlpatterns = [
     path('herencia/', views.herencia, name='herencia'),#este html es una extension de otro que es una plantilla
     path('', views.index, name='index'),#esta es la pagina principal
     path('datos/', include('datos.urls')),#esta conecta con una view de otro modulo (hace falta importar include) (dominio.x/datos/test)
-    path('formularios/', views.formularios, name="formularios"),
+    path('formularios/', views.formularios, name="formularios"), #usados para formularios normales
     path('destinoformularioget/', views.destinoformularioget, name="destinoformularioget"),
     path('destinoformulariopost/', views.destinoformulariopost, name="destinoformulariopost"),
+    path('formsdjango/', views.formsdjango, name='formsdjango'), #usado para formularios de django
+    path('formsdjangodestino/', views.formsdjango, name='formsdjangodestino'),
     
 ]

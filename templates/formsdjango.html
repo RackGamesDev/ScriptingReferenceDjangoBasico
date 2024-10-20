@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputClase{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>formulario de django</h1>
+    
+    <form action="{% url 'formsdjangodestino' %}", method="POST">
+        {% csrf_token %}
+        {{ comentairoForm.as_p }} <!--contenido del formulario hecho por django en forms.py (al poner .as_p se ponen como si fuesen etiquetas <p>, tambien se puede usar .as_table si estuviese dentro de <table>)-->
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>
