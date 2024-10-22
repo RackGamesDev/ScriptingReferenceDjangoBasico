@@ -21,7 +21,7 @@ from django.urls import path, include
 from . import views #IMPORTANTE IMPORTAR ESTO
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), #panel de administracion de django
     path('saludo/', views.saludo, name='saludo'),#poner esto por cada url posible, en este caso llama a la funcion saludo de views.py
     path('suma/<int:a>/<int:b>/<str:c>/', views.suma, name='suma'),#cuando la url tenga variables (suma/3/5/hola)
     path('pagina/', views.pagina, name='pagina'),#esta devuelve un html (template)

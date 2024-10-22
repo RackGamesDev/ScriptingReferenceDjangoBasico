@@ -28,3 +28,7 @@ cada vez que se actualice cualquier models.py: python manage.py makemigrations ;
 para conectar los otros modulos al principal, crear en el modulo urls.py y hacer alli las urls como si nada, y luego vincularlo al urls.py principal
 
 para usar otra base de datos que no sea sqlite3 se cambia en el modulo principal en settings.py en DATABASES (en este caso se cambio a postgresql)
+
+para crear superusuario en el panel de administracion: python manage.py createsuperuser 
+para entrar en el panel: <dominio>/admin/ como url
+para registrar un modelo en el panel, se hace desde admin.py en cada modulo
