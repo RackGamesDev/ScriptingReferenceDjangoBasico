@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" id="mandar">mandar peticion</a>
+    {% csrf_token %}
+    <script>
+        let boton = document.getElementById("mandar");
+        boton.addEventListener("click", async (e) => {
+            e.preventDefault();
+            console.log("hola");
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            console.log(csrftoken);
+            //al presionar el enlace se mandara una peticion post con este contenido a /peticiones/recibePeticion
+            const req = await fetch("{% url 'recibePeticion' %}", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": csrftoken,
+                    "Content-type": "application/json; charset=utf-8",
+                },
+                //credentials: "same-origin",
+                mode: "same-origin",
+                body: JSON.stringify({
+                    numero: 3,
+                    texto: "hola",
+                    objeto: {
+                        nombre: "aa"
+                    }
+                })
+            });
+            //y aqui se recibe la respuesta
+            const res = await req.json();
+            console.log(res.respuesta);
+            console.log(res.objeto.propiedad);
+        });
+    </script>
+</body>
+</html>

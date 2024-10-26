@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'modulo',#AGREGANDO MODULO PERSONALIZADO (ver crear.txt)
     'datos',
+    'peticiones',
 ]
 
 MIDDLEWARE = [

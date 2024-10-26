@@ -35,5 +35,6 @@ urlpatterns = [
     path('destinoformulariopost/', views.destinoformulariopost, name="destinoformulariopost"),
     path('formsdjango/', views.formsdjango, name='formsdjango'), #usado para formularios de django
     path('formsdjangodestino/', views.formsdjango, name='formsdjangodestino'),
+    path('peticiones/', include('peticiones.urls')),
     
 ]
