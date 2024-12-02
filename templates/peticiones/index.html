@@ -15,7 +15,7 @@
             console.log("hola");
             const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
             console.log(csrftoken);
-            //al presionar el enlace se mandara una peticion post con este contenido a /peticiones/recibePeticion
+            //Al presionar el enlace se mandara una peticion post con este contenido a /peticiones/recibePeticion
             const req = await fetch("{% url 'recibePeticion' %}", {
                 method: "POST",
                 headers: {
@@ -32,7 +32,7 @@
                     }
                 })
             });
-            //y aqui se recibe la respuesta
+            //Y aqui se recibe la respuesta
             const res = await req.json();
             console.log(res.respuesta);
             console.log(res.objeto.propiedad);
