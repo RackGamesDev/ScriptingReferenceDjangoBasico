@@ -1,19 +1,19 @@
-es un framework backend para python que usa el mvc(modelo vista controlador) solo que las vistas se llaman templates y el controlador se llama vista
+Es un framework backend para python que usa el mvc(modelo vista controlador) solo que las vistas se llaman templates y el controlador se llama vista
 
 
-despues de instalar pip, python3 y django:
+Despues de instalar pip, python3 y django:
 django-admin startproject nombre
 python manage.py migrate (cada vez que cambie la base de datos)
-(crear en la carpeta views.py)
-(crear carpeta de templates donde estaran los htmls y declararlo en settings.py)
-(crear carpeta de statics donde estaran los archivos estaticos (recursos))
-(crear carpeta de layouts donde estaran los pedazos montables de html)
-(crear una carpeta para los htmls de cada modulo (ej: datos))
-(crear una carpeta forms para los formularios?)
-(crear forms.py en caso de querer usar los formularios que vienen con django)
-(configurar settings.py)
+(Crear en la carpeta views.py)
+(Crear carpeta de templates donde estaran los htmls y declararlo en settings.py)
+(Crear carpeta de statics donde estaran los archivos estaticos (recursos))
+(Crear carpeta de layouts donde estaran los pedazos montables de html)
+(Crear una carpeta para los htmls de cada modulo (ej: datos))
+(Crear una carpeta forms para los formularios?)
+(Crear forms.py en caso de querer usar los formularios que vienen con django)
+(Configurar settings.py)
 
-abrir con: python manage.py runserver
+Abrir con: python manage.py runserver
 
 
 manage.py abre y gestiona el proyecto
@@ -21,14 +21,14 @@ db.sqlite3 es la base de datos (puede ser intercambiable por otro motor)
 settings.py = ajustes y extensiones
 urls.py = diccionario con cada plantilla/vista a las urls
 
-para crear nuevo modulo: python manage.py startapp nombre
-para checkear si esta bien instalado: python manage.py check nombre
-en este caso la conexion a la base de datos esta en el modulo datos (datos/models.py)
-cada vez que se actualice cualquier models.py: python manage.py makemigrations ; python manage.py migrate
-para conectar los otros modulos al principal, crear en el modulo urls.py y hacer alli las urls como si nada, y luego vincularlo al urls.py principal
+Para crear nuevo modulo: python manage.py startapp nombre
+Para checkear si esta bien instalado: python manage.py check nombre
+En este caso la conexion a la base de datos esta en el modulo datos (datos/models.py)
+Cada vez que se actualice cualquier models.py: python manage.py makemigrations ; python manage.py migrate
+Para conectar los otros modulos al principal, crear en el modulo urls.py y hacer alli las urls como si nada, y luego vincularlo al urls.py principal
 
-para usar otra base de datos que no sea sqlite3 se cambia en el modulo principal en settings.py en DATABASES (en este caso se cambio a postgresql)
+Para usar otra base de datos que no sea sqlite3 se cambia en el modulo principal en settings.py en DATABASES (en este caso se cambio a postgresql)
 
-para crear superusuario en el panel de administracion: python manage.py createsuperuser 
-para entrar en el panel: <dominio>/admin/ como url
-para registrar un modelo en el panel, se hace desde admin.py en cada modulo
+Para crear superusuario en el panel de administracion: python manage.py createsuperuser 
+Para entrar en el panel: <dominio>/admin/ como url
+Para registrar un modelo en el panel, se hace desde admin.py en cada modulo
