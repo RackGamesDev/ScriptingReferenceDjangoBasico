@@ -15,7 +15,7 @@
     
     <form action="{% url 'formsdjangodestino' %}", method="POST">
         {% csrf_token %}
-        {{ comentairoForm.as_p }} <!--contenido del formulario hecho por django en forms.py (al poner .as_p se ponen como si fuesen etiquetas <p>, tambien se puede usar .as_table si estuviese dentro de <table>)-->
+        {{ comentairoForm.as_p }} <!--Contenido del formulario hecho por django en forms.py (al poner .as_p se ponen como si fuesen etiquetas <p>, tambien se puede usar .as_table si estuviese dentro de <table>)-->
         <input type="submit" value="enviar">
     </form>
 </body>
