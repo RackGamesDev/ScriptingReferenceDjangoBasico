@@ -21,19 +21,19 @@ from django.urls import path, include
 from . import views #IMPORTANTE IMPORTAR ESTO
 
 urlpatterns = [
-    path('admin/', admin.site.urls), #panel de administracion de django
-    path('saludo/', views.saludo, name='saludo'),#poner esto por cada url posible, en este caso llama a la funcion saludo de views.py
-    path('suma/<int:a>/<int:b>/<str:c>/', views.suma, name='suma'),#cuando la url tenga variables (suma/3/5/hola)
-    path('pagina/', views.pagina, name='pagina'),#esta devuelve un html (template)
-    path('dinamico/<str:texto>', views.dinamico, name='dinamico'),#esta representa la variable en el html con parametros
-    path('estaticos/', views.estaticos, name='estaticos'),#esta pagina tiene archivos estaticos
-    path('herencia/', views.herencia, name='herencia'),#este html es una extension de otro que es una plantilla
-    path('', views.index, name='index'),#esta es la pagina principal
-    path('datos/', include('datos.urls')),#esta conecta con una view de otro modulo (hace falta importar include) (dominio.x/datos/test)
-    path('formularios/', views.formularios, name="formularios"), #usados para formularios normales
+    path('admin/', admin.site.urls), #Panel de administracion de django
+    path('saludo/', views.saludo, name='saludo'),#Poner esto por cada url posible, en este caso llama a la funcion saludo de views.py
+    path('suma/<int:a>/<int:b>/<str:c>/', views.suma, name='suma'),#Cuando la url tenga variables (suma/3/5/hola)
+    path('pagina/', views.pagina, name='pagina'),#Esta devuelve un html (template)
+    path('dinamico/<str:texto>', views.dinamico, name='dinamico'),#Esta representa la variable en el html con parametros
+    path('estaticos/', views.estaticos, name='estaticos'),#Esta pagina tiene archivos estaticos
+    path('herencia/', views.herencia, name='herencia'),#Este html es una extension de otro que es una plantilla
+    path('', views.index, name='index'),#Esta es la pagina principal
+    path('datos/', include('datos.urls')),#Esta conecta con una view de otro modulo (hace falta importar include) (dominio.x/datos/test)
+    path('formularios/', views.formularios, name="formularios"), #Usados para formularios normales
     path('destinoformularioget/', views.destinoformularioget, name="destinoformularioget"),
     path('destinoformulariopost/', views.destinoformulariopost, name="destinoformulariopost"),
-    path('formsdjango/', views.formsdjango, name='formsdjango'), #usado para formularios de django
+    path('formsdjango/', views.formsdjango, name='formsdjango'), #Usado para formularios de django
     path('formsdjangodestino/', views.formsdjango, name='formsdjangodestino'),
     path('peticiones/', include('peticiones.urls')),
     
