@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>hola: {{texto}}</h2><!--para representar variables pasadas en views.py se pone con corchetes, estas variables tambien pueden ser funciones que devuelvan algo-->
+    <h2>hola: {{texto}}</h2><!--Para representar variables pasadas en views.py se pone con corchetes, estas variables tambien pueden ser funciones que devuelvan algo-->
     <ul>
-        <!--tambien se pueden hacer condicionales y bucles de esta manera (se esta usando un array desde el view)-->
+        <!--Tambien se pueden hacer condicionales y bucles de esta manera (se esta usando un array desde el view)-->
         {% for cosa in cosas %}
             <li>{{cosa}}</li>
         {% endfor %}
@@ -17,7 +17,7 @@
         {% else %}
             <li>adios</li>
         {% endif %}
-        <p>{{cosas|length}}</p><!--asi se pueden acceder a sus propiedades y funciones-->
+        <p>{{cosas|length}}</p><!--Asi se pueden acceder a sus propiedades y funciones-->
         <p>{{texto|upper}}</p>
 
         {# comentario que no se manda al cliente #}
